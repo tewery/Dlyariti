@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="game">
+
+    <header class="top">
+        <div class="logo">Ритин<span>Фетиш</span></div>
+        <div class="level-badge">
+            LEVEL <b id="level">1</b>/100
+        </div>
+    </header>
+
+    <section class="progress-panel">
+        <div class="progress-heading">
+            <span>ТВОЙ ПРОГРЕСС</span>
+            <b id="progressText">0 / 100</b>
+        </div>
+        <div class="progress-track">
+            <div id="progressBar"></div>
+        </div>
+    </section>
+
+    <section class="info">
+        <div class="info-card">
+            <span>ОСТАЛОСЬ</span>
+            <b id="remaining">0</b>
+        </div>
+        <div class="info-card">
+            <span>ХОДЫ</span>
+            <b id="moves">0</b>
+        </div>
+        <div class="info-card">
+            <span>ВРЕМЯ</span>
+            <b id="timer">00:00</b>
+        </div>
+    </section>
+
+    <section class="level-selector">
+        <label for="levelSelect">ВЫБОР УРОВНЯ</label>
+        <select id="levelSelect"></select>
+        <span id="difficulty">Лёгкий уровень</span>
+    </section>
+
+    <div class="instruction">
+        Выеби эти стрелочки!
+    </div>
+
+    <div class="board-wrap">
+        <div class="board" id="board"></div>
+    </div>
+
+    <div class="message" id="message">
+        Найди стрелку со свободным путём
+    </div>
+
+    <div class="actions">
+        <button id="restart" class="secondary">↻ Заново</button>
+        <button id="hint" class="primary">✦ Подсказка</button>
+    </div>
+
+    <section class="record-panel">
+        <div>
+            <span>ЛУЧШЕЕ ВРЕМЯ</span>
+            <b id="bestTime">—</b>
+        </div>
+        <div>
+            <span>ЛУЧШИЕ ХОДЫ</span>
+            <b id="bestMoves">—</b>
+        </div>
+    </section>
+
+    <footer>Лол кек лол кекекекк</footer>
+
+</main>
+
+<div class="modal hidden" id="modal">
+    <div class="modal-content">
+        <div class="win-icon">🏆</div>
+        <h1 id="winTitle">Выебала эти стрелочки!!!</h1>
+        <p>Теперь пора ко мне котик !</p>
+
+        <div id="stars" class="stars">★★★</div>
+
+        <div class="result" id="result"></div>
+
+        <button id="nextLevel" class="primary">
+            Следующий уровень →
+        </button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
